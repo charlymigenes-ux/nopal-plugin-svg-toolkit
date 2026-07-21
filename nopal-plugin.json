@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "id": "svg-toolkit",
+  "name": "Herramientas SVG",
+  "version": "0.8.0",
+  "publisher": "NOPAL Labs",
+  "category": "Diseño",
+  "description": "Limpia, une y simplifica trazos SVG antes de enviarlos a producción.",
+  "permissions": ["Leer y guardar archivos SVG"],
+  "compatibility": ["Láser", "CNC"],
+  "frontend": {
+    "script": "frontend/svg-toolkit.js",
+    "style": "frontend/svg-toolkit.css",
+    "section": "svg-toolkit"
+  }
+}
