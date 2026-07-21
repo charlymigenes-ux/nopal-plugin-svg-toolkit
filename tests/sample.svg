@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300mm" height="300mm" viewBox="0 0 300 300">
+  <metadata>archivo para pruebas</metadata>
+  <g fill="none" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="150" cy="150" r="112"/>
+    <path d="M150 245 L150 92 C150 68 126 68 126 92 L126 160 C126 174 112 174 112 160 L112 126 C112 108 94 108 94 126 L94 184"/>
+    <path d="M150 245 L150 92 C150 68 126 68 126 92 L126 160 C126 174 112 174 112 160 L112 126 C112 108 94 108 94 126 L94 184"/>
+    <polyline points="45,205 68,171 83,191 104,153 122,181"/>
+    <polyline points="178,182 198,151 214,180 235,157 258,205"/>
+    <line x1="55" y1="235" x2="100" y2="235"/><line x1="100" y1="235" x2="145" y2="235"/>
+    <line x1="155" y1="235" x2="200" y2="235"/><line x1="200" y1="235" x2="245" y2="235"/>
+    <polyline points="62,112 78,101 91,111 110,92"/>
+    <polyline points="187,101 203,90 217,102 241,102"/>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Herramientas SVG — prueba visual</title>
+  <style>
+    :root { --bg:#07111a; --card-bg:#0c1824; --panel-bg:#101f2d; --border:#25384a; --text:#f7fafc; --text-secondary:#aebdca; --text-muted:#8192a3; }
+    * { box-sizing:border-box; }
+    html,body { height:100%; margin:0; font-family:Inter,system-ui,sans-serif; background:radial-gradient(circle at 75% 0,#0c2835,transparent 38%),var(--bg); color:var(--text); }
+    .app { display:grid; grid-template-columns:190px 1fr; height:100%; }
+    aside { padding:18px 12px; border-right:1px solid var(--border); background:rgba(5,15,24,.82); }
+    aside h1 { margin:0 0 24px; color:#22c55e; font-size:1.1rem; }
+    .nav-category-header { width:100%; padding:8px; border:0; background:none; color:var(--text-muted); text-align:left; }
+    .nav-category-items { display:flex; flex-direction:column; gap:5px; }
+    .nav-item { display:flex; align-items:center; gap:9px; width:100%; padding:10px; border:1px solid transparent; border-radius:8px; background:none; color:var(--text-secondary); cursor:pointer; }
+    .nav-item:hover,.nav-item.active { border-color:#06b6d4; background:rgba(6,182,212,.12); color:#22d3ee; }
+    .content { min-width:0; min-height:0; overflow:hidden; }
+    .view-section.active { display:block !important; }
+  </style>
+  <link rel="stylesheet" href="../frontend/svg-toolkit.css?v=4">
+</head>
+<body class="dark">
+  <div class="app">
+    <aside><h1>NOPAL LABS</h1><div class="nav-category" data-group="plugins"><button class="nav-category-header">Plugins</button><div class="nav-category-items"></div></div></aside>
+    <div class="content"></div>
+  </div>
+  <script>
+    window.NopalPluginRegistry = {};
+    window.switchSection = name => {
+      document.querySelectorAll('.view-section').forEach(section => { section.classList.remove('active'); section.style.display = 'none'; });
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.toggle('active', item.dataset.section === name));
+      const section = document.getElementById(`${name}-section`);
+      if (section) { section.classList.add('active'); section.style.display = 'block'; }
+    };
+    window.showToast = (message, tone) => console.log(`[${tone || 'success'}] ${message}`);
+    window.applySidebarOrder = () => window.switchSection('svg-toolkit');
+  </script>
+  <script src="../frontend/svg-toolkit.js?v=4"></script>
+</body>
+</html>
