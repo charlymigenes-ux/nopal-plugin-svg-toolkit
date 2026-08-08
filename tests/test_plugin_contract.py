@@ -14,7 +14,7 @@ class PluginContractTests(unittest.TestCase):
 
         self.assertEqual(manifest["schema_version"], 1)
         self.assertEqual(manifest["id"], "svg-toolkit")
-        self.assertEqual(manifest["version"], "0.8.0")
+        self.assertEqual(manifest["version"], "0.9.0")
         self.assertNotIn("backend", manifest)
         self.assertEqual(manifest["frontend"], {
             "script": "frontend/svg-toolkit.js",
